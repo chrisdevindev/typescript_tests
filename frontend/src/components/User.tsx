@@ -3,7 +3,7 @@ import React from "react";
 
 interface IUser {
     name: string;
-    email: string;
+    email?: string;
 }
 
 interface Props{
@@ -16,7 +16,7 @@ const User: React.FC<Props> = ({ user }) => {
       <strong>Nome: </strong>
       {user.name} <br />
       <strong>E-mail: </strong>
-      {user.email} <br /> <br />
+      {user.email || 'Não possui e-mail'} <br /> <br />
     </div>
   );
 };
